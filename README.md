@@ -1,2 +1,2 @@
 # using-remark
-A remark presentation about how to use Remark for GitHub hosted presentations
+A Remark presentation about how to use [Remark](https://github.com/gnab/remark) for [GitHub hosted presentations](https://pages.github.com)
