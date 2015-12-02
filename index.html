@@ -1,19 +1,37 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Title</title>
+    <title>Using Remark</title>
     <meta charset="utf-8">
     <style>
       @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
       @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
       @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
-      body { font-family: 'Droid Serif'; }
-      h1, h2, h3 {
-        font-family: 'Yanone Kaffeesatz';
-        font-weight: normal;
+      body {
+        font-family: 'Open Sans';
       }
-      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+      h1, h2, h3 {
+        font-family: 'Open Sans';
+        font-weight: bold;
+      }
+      h1 {
+        color: #c00;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; color: #333;}
+      .remark-slide-content { font-size:24px;}
+
+      img { max-width: 100%; }
+      .inverse {
+        background-color: #444;
+        color: #eee;
+      }
+      .inverse a {
+        color: red;
+      }
+
+
     </style>
   </head>
   <body>
@@ -21,19 +39,98 @@
 
 class: center, middle
 
-# Title
+# Using Remark
+## Step by step
 
 ---
 
-# Agenda
+class: middle, inverse
 
-1. Introduction
-2. Deep-dive
-3. ...
+# What's Remark?
+
+This presentation was created in [Remark](https://github.com/gnab/remark) and
+is hosted on [GitHub](https://pages.github.com).
+
+Remark uses [Markdown](https://help.github.com/articles/github-flavored-markdown)
+to create a slideshow within a single HTML document. The slideshow can then be pushed
+to GitHub and served using GitHub Pages. It's really just an HTML file!
+
+Follow along to see how it all works.
 
 ---
 
-# Introduction
+# 1. Create a Folder for Your Presentation.
+
+![](images/Folder.png)
+
+---
+
+# 2. Add an `index.html` file using the Remark boilerplate.
+
+Directions are given in the [Remark Getting Started Docs](https://github.com/gnab/remark/tree/master#getting-started).
+
+![](images/Boilerplate.png)
+
+---
+
+# 3. Edit the Markdown text inside the `#source` textarea.
+
+Markdown text is converted automatically to HTML. Yes, it's yet another markup language,
+but the [basics](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) are really super-easy and
+can be learned in a few minutes.
+
+* Remark uses `---` (three hyphens) on a single line to delimit slides.
+* You can also use special [formatting directives](https://github.com/gnab/remark/wiki/Formatting)
+and [slide properties](https://github.com/gnab/remark/wiki/Markdown#slide-properties) to specify styling.
+
+You can view the slides in any web browser just like it was HTML.
+
+---
+
+# 4. Add images and backgrounds.
+
+Keep your screenshots, mockups, logos, etc. in a folder called `images`.
+
+You can link to an image like so ...
+  ```
+  ![alt text](images/filename.jpg)
+  ```
+
+where `filename.jpg` is the actual filename for your image.
+
+Background images are even simpler:
+  ```
+  background-image: url(images/background.png)
+  ```
+
+---
+
+# 5. Edit the CSS inside the `head` to provide additional custom styling.
+
+Like maybe you want to change the fonts?
+
+![](images/EditCSS.png)
+
+---
+
+# 6. Commit your files to Git and Push to GitHub.
+
+![](images/GitHub.png)
+
+---
+
+# 7. Create a new `gh-pages` branch in your Git repository. Sync to GitHub.
+
+![](images/Branch.png)
+
+---
+
+# 8. View the slides using GitHub Pages.
+
+Follow the instructions on GitHub.
+
+![](images/GitHubPages.png)
+
 
     </textarea>
     <script src="https://gnab.github.io/remark/downloads/remark-latest.min.js">
